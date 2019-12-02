@@ -7,6 +7,9 @@ import com.luv2code.aopdemo.Account;
 @Component
 public class AccountDAO {
 	
+	private String name;
+	private String serviceCode;
+	
 	public void addAccount(Account theAccount, boolean vipFlag) {
 		
 		System.out.println(getClass() + "               DOING DB WORK: Adding an account");
@@ -18,4 +21,23 @@ public class AccountDAO {
 		return false;
 		
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getServiceCode() {
+		return serviceCode;
+	}
+
+	public void setServiceCode(String serviceCode) {
+		this.serviceCode = serviceCode;
+	}
+	
+	
+	
 }

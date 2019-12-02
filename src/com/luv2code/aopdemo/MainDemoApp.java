@@ -22,6 +22,13 @@ public class MainDemoApp {
 		theAccount.addAccount(myAccount, true);
 		theAccount.doWork();
 		
+		theAccount.setName("foobar");
+		theAccount.setServiceCode("silver");
+		
+		String name = theAccount.getName();
+		String code = theAccount.getServiceCode();
+		
+		
 		theMembershipDAO.addSillyMember();
 		theMembershipDAO.goToSleep();
 		
