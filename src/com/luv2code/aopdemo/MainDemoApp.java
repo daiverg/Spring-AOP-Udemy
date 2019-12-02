@@ -21,6 +21,7 @@ public class MainDemoApp {
 //		call method
 		theAccount.addAccount(myAccount, true);
 		theAccount.doWork();
+		
 		theMembershipDAO.addSillyMember();
 		theMembershipDAO.goToSleep();
 		
