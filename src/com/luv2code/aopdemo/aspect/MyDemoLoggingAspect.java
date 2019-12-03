@@ -34,7 +34,19 @@ public class MyDemoLoggingAspect {
 		
 		long begin = System.currentTimeMillis();
 		
-		Object result = theProceedJoinPoint.proceed();
+		Object result = null;
+						
+		try {
+			result = theProceedJoinPoint.proceed();
+		} catch (Exception e) {
+//			log exception
+			myLogger.warning(e.getMessage());
+//			give custom message
+			result = "my custom message";
+			
+//			rethrow exception
+//			throw e;
+		}
 		
 		long end = System.currentTimeMillis();
 		

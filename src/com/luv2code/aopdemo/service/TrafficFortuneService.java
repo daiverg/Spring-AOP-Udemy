@@ -17,5 +17,14 @@ public class TrafficFortuneService {
 		
 		return "Expect heavy traffic this morning";
 	}
+
+	public String getFortune(boolean tripWare) {
+		
+		if(tripWare) {
+			throw new RuntimeException("HighWay is closed!!! (exception)");
+		}
+		
+		return getFortune();
+	}
 	
 }
